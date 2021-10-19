@@ -1,0 +1,12 @@
+version: 1
+applications:
+  - name: website-stage
+    memory: 756m
+    path: target/website-0.0.1-SNAPSHOT.jar
+    buildpacks:
+      - java_buildpack
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }, memory_calculator: { stack_threads: 25 } }'
+#    routes:
+#      - route: jaffan.com
+#      - route: www.jaffan.com
